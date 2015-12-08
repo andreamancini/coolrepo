@@ -30,7 +30,7 @@ public class Tax {
 	}
 
 	public MoneyValue calculate(MoneyValue value) {
-		return value.nearestFactorApprox(rate);
+		return value.multipleForTax(rate);
 	}
 
 }

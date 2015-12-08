@@ -10,7 +10,6 @@ import it.amancini.salestaxes.domain.receipts.Receipt;
 import it.amancini.salestaxes.domain.taxes.Tax;
 import it.amancini.salestaxes.domain.taxes.TaxExemptionVerifier;
 import it.amancini.salestaxes.domain.taxes.TaxImportationVerifier;
-import it.amancini.salestaxes.domain.taxes.TaxSystem;
 
 public class App {
 

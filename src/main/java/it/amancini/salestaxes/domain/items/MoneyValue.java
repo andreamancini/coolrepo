@@ -36,9 +36,9 @@ public class MoneyValue {
         return new MoneyValue(value.add(other.value));
     }
     
-    public MoneyValue nearestFactorApprox(BigDecimal factor) {
+    public MoneyValue multipleForTax(BigDecimal taxRate) {
     	
-    	MoneyValue result = this.multiply(factor);    	
+    	MoneyValue result = this.multiply(taxRate);    	
     	
         BigDecimal tmpResult = result.getValue().divide(ROUNDING_DIVISOR,0,RoundingMode.UP);
        
