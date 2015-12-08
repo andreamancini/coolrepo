@@ -19,7 +19,7 @@ public class TaxedOrderItem implements OrderItem {
 	}
 
 	@Override
-	public Good getGood() {
+	public Item getGood() {
 		return taxableOrderItem.getGood();
 	}
 

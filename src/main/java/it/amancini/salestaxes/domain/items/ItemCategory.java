@@ -1,11 +1,11 @@
 package it.amancini.salestaxes.domain.items;
 
-public class GoodCategory {
+public class ItemCategory {
 	
 	private Integer id;
 	private String name;
 	
-	public GoodCategory(Integer id, String name) {
+	public ItemCategory(Integer id, String name) {
 		this.id = id;
 	}
 	
@@ -17,8 +17,8 @@ public class GoodCategory {
 	    if (other == null) 
 	    	return false;
 	    else
-	    	return other instanceof GoodCategory && 
-	    		((GoodCategory)other).getId().equals(id);
+	    	return other instanceof ItemCategory && 
+	    		((ItemCategory)other).getId().equals(id);
 	}
 
 	public Integer getId() {

@@ -1,9 +1,9 @@
 package it.amancini.salestaxes.domain.taxes;
 
-import it.amancini.salestaxes.domain.items.Good;
+import it.amancini.salestaxes.domain.items.Item;
 
 public interface TaxVerifier {
 	
-	public boolean verifyFor(Good good);
+	public boolean verifyFor(Item good);
 
 }

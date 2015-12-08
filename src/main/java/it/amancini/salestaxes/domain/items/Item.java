@@ -1,20 +1,17 @@
-/**
- * 
- */
 package it.amancini.salestaxes.domain.items;
 
 /**
  * @author A.Mancini
  * 05 dic 2015
  */
-public class Good {
+public class Item {
 	
 	private String name;
-	private GoodCategory goodCategory;
+	private ItemCategory goodCategory;
 	private boolean imported; 
 	private MoneyValue price;
 	
-	public Good(String name, GoodCategory goodCategory, boolean imported, MoneyValue price) {
+	public Item(String name, ItemCategory goodCategory, boolean imported, MoneyValue price) {
 		this.name = name;
 		this.goodCategory = goodCategory;
 		this.imported = imported;
@@ -25,7 +22,7 @@ public class Good {
 		return name;
 	}
 
-	public GoodCategory getGoodCategory() {
+	public ItemCategory getGoodCategory() {
 		return goodCategory;
 	}
 

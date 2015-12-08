@@ -7,8 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import it.amancini.salestaxes.domain.items.ExerciseTaxSystem;
-import it.amancini.salestaxes.domain.items.Good;
-import it.amancini.salestaxes.domain.items.GoodCategory;
+import it.amancini.salestaxes.domain.items.Item;
+import it.amancini.salestaxes.domain.items.ItemCategory;
 import it.amancini.salestaxes.domain.items.MoneyValue;
 import it.amancini.salestaxes.domain.items.Order;
 import it.amancini.salestaxes.domain.taxes.Tax;
@@ -21,21 +21,21 @@ import it.amancini.salestaxes.domain.taxes.TaxImportationVerifier;
 public class AppTest {
 	
 	private ExerciseTaxSystem taxSystem;
-	private Good book;
-	private Good musicCD;
-	private Good chocBar;
-	private Good importedBoxChoc1;
-	private Good importedPerfBottle1;
-	private Good importedPerfBottle2;
-	private Good perfBottle;
-	private Good headachePills;
-	private Good importedBoxChoc2;
+	private Item book;
+	private Item musicCD;
+	private Item chocBar;
+	private Item importedBoxChoc1;
+	private Item importedPerfBottle1;
+	private Item importedPerfBottle2;
+	private Item perfBottle;
+	private Item headachePills;
+	private Item importedBoxChoc2;
 	
-	private GoodCategory foodCategory;
-	private GoodCategory medicalCategory;
-	private GoodCategory bookCategory;
-	private GoodCategory otherCategory;
-	private GoodCategory[] exemptCategories;
+	private ItemCategory foodCategory;
+	private ItemCategory medicalCategory;
+	private ItemCategory bookCategory;
+	private ItemCategory otherCategory;
+	private ItemCategory[] exemptCategories;
 
 	@Before
 	public void setUp() {
@@ -46,12 +46,12 @@ public class AppTest {
 	
 	private void setUpCategories() {
 		
-		foodCategory = new GoodCategory(1,"food");
-		medicalCategory = new GoodCategory(2,"medical");
-		bookCategory = new GoodCategory(3, "book");
-		otherCategory = new GoodCategory(4, "other");
+		foodCategory = new ItemCategory(1,"food");
+		medicalCategory = new ItemCategory(2,"medical");
+		bookCategory = new ItemCategory(3, "book");
+		otherCategory = new ItemCategory(4, "other");
 		
-		exemptCategories = new GoodCategory[]{
+		exemptCategories = new ItemCategory[]{
 				 foodCategory,
 				 medicalCategory,
 				 bookCategory		
@@ -69,19 +69,19 @@ public class AppTest {
 	  
 	private void setUpGoods() {
 		// INPUT 1
-	    book = new Good("book abc", bookCategory, false, money("12.49"));
-	    musicCD = new Good("music cd xx", otherCategory, false, money("14.99"));
-	    chocBar = new Good("chocolate bar", foodCategory, false, money("0.85"));
+	    book = new Item("book abc", bookCategory, false, money("12.49"));
+	    musicCD = new Item("music cd xx", otherCategory, false, money("14.99"));
+	    chocBar = new Item("chocolate bar", foodCategory, false, money("0.85"));
 	    
 	    // INPUT 2
-	    importedBoxChoc1    = new Good("imported box chocolate 1" ,foodCategory,true,money("10.00"));
-	    importedPerfBottle1 = new Good("imported bottle perfume 1",otherCategory,true,money("47.50"));
+	    importedBoxChoc1    = new Item("imported box chocolate 1" ,foodCategory,true,money("10.00"));
+	    importedPerfBottle1 = new Item("imported bottle perfume 1",otherCategory,true,money("47.50"));
 	    
 	    //  INPUT 3
-	    importedPerfBottle2 = new Good("imported bottle perfume 2",otherCategory,true,money("27.99"));
-	    perfBottle = new Good("bottle perfume",otherCategory,false,money("18.99"));
-	    headachePills = new Good("headache pills",medicalCategory,false,money("9.75"));
-	    importedBoxChoc2 = new Good("imported box chocolate 2",foodCategory,true,money("11.25"));
+	    importedPerfBottle2 = new Item("imported bottle perfume 2",otherCategory,true,money("27.99"));
+	    perfBottle = new Item("bottle perfume",otherCategory,false,money("18.99"));
+	    headachePills = new Item("headache pills",medicalCategory,false,money("9.75"));
+	    importedBoxChoc2 = new Item("imported box chocolate 2",foodCategory,true,money("11.25"));
 	}
 
     @Test

@@ -2,7 +2,7 @@ package it.amancini.salestaxes.domain.taxes;
 
 import java.math.BigDecimal;
 
-import it.amancini.salestaxes.domain.items.Good;
+import it.amancini.salestaxes.domain.items.Item;
 import it.amancini.salestaxes.domain.items.MoneyValue;
 
 public class Tax {
@@ -25,7 +25,7 @@ public class Tax {
 		return rate;
 	}
 	  
-	public boolean verifyFor(Good good) {
+	public boolean verifyFor(Item good) {
 	    return verifier.verifyFor(good);
 	}
 

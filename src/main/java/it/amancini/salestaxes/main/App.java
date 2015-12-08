@@ -3,8 +3,8 @@ package it.amancini.salestaxes.main;
 import static it.amancini.salestaxes.domain.items.MoneyValue.money;
 
 import it.amancini.salestaxes.domain.items.ExerciseTaxSystem;
-import it.amancini.salestaxes.domain.items.Good;
-import it.amancini.salestaxes.domain.items.GoodCategory;
+import it.amancini.salestaxes.domain.items.Item;
+import it.amancini.salestaxes.domain.items.ItemCategory;
 import it.amancini.salestaxes.domain.items.Order;
 import it.amancini.salestaxes.domain.receipts.Receipt;
 import it.amancini.salestaxes.domain.taxes.Tax;
@@ -15,20 +15,20 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		GoodCategory foodCategory = new GoodCategory(1,"food");
-		GoodCategory medicalCategory = new GoodCategory(2,"medical");
-		GoodCategory bookCategory = new GoodCategory(3, "book");
-		GoodCategory otherCategory = new GoodCategory(4, "other");
+		ItemCategory foodCategory = new ItemCategory(1,"food");
+		ItemCategory medicalCategory = new ItemCategory(2,"medical");
+		ItemCategory bookCategory = new ItemCategory(3, "book");
+		ItemCategory otherCategory = new ItemCategory(4, "other");
 		
-		GoodCategory[] exemptCategories = new GoodCategory[]{
+		ItemCategory[] exemptCategories = new ItemCategory[]{
 				 foodCategory,
 				 medicalCategory,
 				 bookCategory		
 		};
 		
-	    Good book = new Good("book abc", bookCategory, false, money("12.49"));
-	    Good musicCD = new Good("music cd xx", otherCategory, false, money("14.99"));
-	    Good chocBar = new Good("chocolate bar", foodCategory, false, money("0.85"));	  
+	    Item book = new Item("book abc", bookCategory, false, money("12.49"));
+	    Item musicCD = new Item("music cd xx", otherCategory, false, money("14.99"));
+	    Item chocBar = new Item("chocolate bar", foodCategory, false, money("0.85"));	  
 	    
 	    Tax basicTax = new Tax("Basic Sales Tax", "0.10", new TaxExemptionVerifier(exemptCategories));
 	    Tax importTax = new Tax("Import Tax", "0.05", new TaxImportationVerifier());
