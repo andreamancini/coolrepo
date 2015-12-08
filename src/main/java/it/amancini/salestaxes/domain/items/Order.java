@@ -15,8 +15,8 @@ public class Order {
 	    this.taxSystem = taxSystem;
 	}  
 
-	public void add(Item good, int quantity) {
-		TaxableOrderItem taxableRow = new TaxableOrderItem(good,quantity,good.getPrice());
+	public void add(Item item, int quantity) {
+		TaxableOrderItem taxableRow = new TaxableOrderItem(item,quantity,item.getPrice());
 		Collection<TaxRowComponent> taxComponents = taxSystem.calculateFor(taxableRow);
 		TaxedOrderItem orderRow = new TaxedOrderItem(taxableRow,
 								taxComponents.toArray(new TaxRowComponent[taxComponents.size()]));

@@ -5,8 +5,8 @@ import it.amancini.salestaxes.domain.items.Item;
 public class TaxImportationVerifier implements TaxVerifier {
 	
 	@Override
-	public boolean verifyFor(Item good) {
-		return good.isImported();
+	public boolean verifyFor(Item item) {
+		return item.isImported();
 	}
 	
 }

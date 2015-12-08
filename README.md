@@ -70,7 +70,7 @@ I made two different strategies (implementations of the TaxVerifier), one based 
 When you create a Tax, you pass in the constructor the description, the rate, and an instance of the TaxVerifier,
 so that the Tax object can delegate the TaxVerifier to check if this Tax is appliable for the Item passed as parameter.
 The Tax object also has a method which (through to the MoneyValue) calculates the tax with the approximation specified (nearest 0.05). This method basically
-multiplies the price with the tax rate, then divides the result by 0.05 (rounding up to the farthest integer) and then multiplies it again by 0.05; 
+multiplies the price with the tax rate, then divides the result by 0.05 (rounding up to the farthest integer) and then multiplies it again by 0.05.
 
 The whole tax system is modeled with the interface TaxSystem which has an implementation which models the project specifications.
 The TaxSystem has only one method to calculate the taxes to pay on a OrderItem passed as parameter, which represents the row of the Order, that is the
@@ -78,7 +78,7 @@ triplet Item-quantity-unitPrice, plus the taxable amount (quantity times the uni
 
 The OrderItem interface has two implementations, TaxableOrderItem and TaxedOrderItem. The class TaxedOrderItem decorates the class TaxableOrderItem with the taxes (collection of TaxRowComponents).
 
-The receipt is modeled by the class Receipt, which extends the template class ReceiptTemplate, containing the costruction logic of the receipt. 
+The receipt is modeled by the class Receipt, which extends the template class ReceiptTemplate, and contains the costruction logic of the receipt. 
 
 -------  RUN THE TEST AND APP ---------
 In order to run the program and tests you need maven

@@ -2,19 +2,19 @@ package it.amancini.salestaxes.domain.items;
 
 public class TaxableOrderItem implements OrderItem {
 	
-	private Item good;
+	private Item item;
 	private int quantity;
 	private MoneyValue unitPrice;
 	
-	public TaxableOrderItem(Item good, int quantity, MoneyValue unitPrice) {
-		this.good = good;
+	public TaxableOrderItem(Item item, int quantity, MoneyValue unitPrice) {
+		this.item = item;
 		this.quantity = quantity;
 		this.unitPrice = unitPrice;
 	}
 
 	@Override
-	public Item getGood() {
-		return good;
+	public Item getItem() {
+		return item;
 	}
 	
 	@Override

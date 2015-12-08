@@ -15,8 +15,8 @@ public class TaxExemptionVerifier implements TaxVerifier {
 	}
 	
 	@Override
-	public boolean verifyFor(Item good) {
-	    return !exemptionCategories.contains(good.getGoodCategory());
+	public boolean verifyFor(Item item) {
+	    return !exemptionCategories.contains(item.getItemCategory());
 	}
 
 }

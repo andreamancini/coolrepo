@@ -10,7 +10,7 @@ public class Receipt extends ReceiptTemplate {
 	}
 	
 	protected void printRow(TaxedOrderItem row) {
-		out.printf("nr.%3d %20s       %7s\n", row.getQuantity(), row.getGood().getName(), row.getTaxedAmount());
+		out.printf("nr.%3d %20s       %7s\n", row.getQuantity(), row.getItem().getName(), row.getTaxedAmount());
 	}
 	
 	protected void printTaxes(MoneyValue taxes) {

@@ -4,18 +4,18 @@ import it.amancini.salestaxes.domain.taxes.Tax;
 
 public class TaxRowComponent {
 	
-	private Item good;
+	private Item item;
 	private Tax tax;
 	private MoneyValue amount;
 		
-	public TaxRowComponent(Item good,Tax tax,MoneyValue amount) {
-		this.good = good;
+	public TaxRowComponent(Item item,Tax tax,MoneyValue amount) {
+		this.item = item;
 		this.tax = tax;
 		this.amount = amount;
 	}
 	
-	public Item getGood() {
-		return good;
+	public Item getItem() {
+		return item;
 	}
 	
 	public Tax getTax() {

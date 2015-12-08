@@ -25,8 +25,8 @@ public class Tax {
 		return rate;
 	}
 	  
-	public boolean verifyFor(Item good) {
-	    return verifier.verifyFor(good);
+	public boolean verifyFor(Item item) {
+	    return verifier.verifyFor(item);
 	}
 
 	public MoneyValue calculate(MoneyValue value) {

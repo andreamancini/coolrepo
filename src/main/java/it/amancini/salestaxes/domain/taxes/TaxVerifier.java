@@ -4,6 +4,6 @@ import it.amancini.salestaxes.domain.items.Item;
 
 public interface TaxVerifier {
 	
-	public boolean verifyFor(Item good);
+	public boolean verifyFor(Item item);
 
 }

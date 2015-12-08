@@ -41,7 +41,7 @@ public class AppTest {
 	public void setUp() {
 		setUpCategories();
 		setUpTaxes();
-		setUpGoods();
+		setUpItems();
 	}
 	
 	private void setUpCategories() {
@@ -67,7 +67,7 @@ public class AppTest {
 	    taxSystem.add(importTax);    
 	}
 	  
-	private void setUpGoods() {
+	private void setUpItems() {
 		// INPUT 1
 	    book = new Item("book abc", bookCategory, false, money("12.49"));
 	    musicCD = new Item("music cd xx", otherCategory, false, money("14.99"));

@@ -23,7 +23,7 @@ public class ExerciseTaxSystem implements TaxSystem {
 		
 		List<TaxRowComponent> taxComponents = new ArrayList<TaxRowComponent>();
 	    for (Tax tax : taxes) {
-	      if (tax.verifyFor(orderItem.getGood())) {
+	      if (tax.verifyFor(orderItem.getItem())) {
 	        TaxRowComponent taxComponent = calculateComponent(tax, orderItem);
 	        taxComponents.add(taxComponent);
 	      }
@@ -33,7 +33,7 @@ public class ExerciseTaxSystem implements TaxSystem {
 
 	private TaxRowComponent calculateComponent(Tax tax, OrderItem orderItem) {
 	    MoneyValue taxValue = tax.calculate(orderItem.getTaxableAmount());
-	    return new TaxRowComponent(orderItem.getGood(), tax, taxValue);
+	    return new TaxRowComponent(orderItem.getItem(), tax, taxValue);
 	}
 
 }

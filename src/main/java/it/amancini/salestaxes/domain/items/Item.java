@@ -7,13 +7,13 @@ package it.amancini.salestaxes.domain.items;
 public class Item {
 	
 	private String name;
-	private ItemCategory goodCategory;
+	private ItemCategory itemCategory;
 	private boolean imported; 
 	private MoneyValue price;
 	
-	public Item(String name, ItemCategory goodCategory, boolean imported, MoneyValue price) {
+	public Item(String name, ItemCategory itemCategory, boolean imported, MoneyValue price) {
 		this.name = name;
-		this.goodCategory = goodCategory;
+		this.itemCategory = itemCategory;
 		this.imported = imported;
 		this.price = price;
 	}
@@ -22,8 +22,8 @@ public class Item {
 		return name;
 	}
 
-	public ItemCategory getGoodCategory() {
-		return goodCategory;
+	public ItemCategory getItemCategory() {
+		return itemCategory;
 	}
 
 	public boolean isImported() {
