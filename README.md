@@ -47,6 +47,7 @@ Output 3:
 1 imported box of chocolates: 11.85
 Sales Taxes: 6.70
 Total: 74.68
+
 -------------- SOLUTION ---------------
 Every item in the shopping basket is modeled with the class "Good" which has four attributes:
 1) the name of the good
